@@ -2,7 +2,6 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'EmailListItem',
-
   props: {
     email: {
       type: String,
@@ -15,6 +14,7 @@ export default defineComponent({
     },
   },
 
+  emits: ['remove'],
   template: `
     <li :class="{ marked }">
       {{ email }}
